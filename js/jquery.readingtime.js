@@ -10,16 +10,18 @@
 
 	$.fn.readingTime = function() {
 
-		//Pre-define common reading speeds
-		var slow 	= 150;
-		var average	= 200;
-		var fast 	= 250;
+		//Common reading speeds
+		var readingSpeed = {
+			slow: 		150,
+			average: 	200,
+			fast: 		250
+		}
 
 		//Set deafults
 		var defaults = {
 
 			//Set read-rate - Deafult is national average
-			wordsPerMinute: average,
+			wordsPerMinute: readingSpeed.average,
 
 			//Set a prefix message if required.
 			prefix: "Reading Time: ",

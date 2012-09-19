@@ -12,7 +12,7 @@
 
 		//Pre-define common reading speeds
 		var slow 	= 150;
-		var average = 200;
+		var average	= 200;
 		var fast 	= 250;
 
 		//Set deafults

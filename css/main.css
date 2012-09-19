@@ -1,5 +1,17 @@
 .post {
+	position: relative;
 	width: 300px;
 	padding: 20px;
 	background-color: #F1F1F1;
 }
+
+.reading-time {	
+	position: absolute;
+	top: 0px;
+	right: -100px;
+	width: 100px;
+	background-color: #FFFFFF;
+	padding: 10px;
+	border-radius: 10px;
+}
+

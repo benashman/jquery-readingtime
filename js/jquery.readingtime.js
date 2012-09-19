@@ -10,10 +10,24 @@
 
 	$.fn.readingTime = function() {
 
+		//Pre-define common reading speeds
+		var slow 	= 150;
+		var average = 200;
+		var fast 	= 250;
+
 		//Set deafults
 		var defaults = {
-			wpm: 200,
+
+			//Set read-rate - Deafult is national average
+			wordsPerMinute: average,
+
+			//Set a prefix message if required.
 			prefix: "Reading Time: ",
+
+			//Set the MMSS separator - Default is colon
+			separator: ":",
+
+			//Set the container class
 			containerClass: "reading-time"
 		}
 
@@ -30,14 +44,19 @@
 			var wordCount = $this.text().split(" ").length;
 
 			//Calculate estimated reading time based on default/user WPM rate
-			var minutes = Math.floor(wordCount / o.wpm);
-			var seconds = Math.floor(wordCount % o.wpm / (o.wpm / 60));
+			var minutes = Math.floor(wordCount / o.wordsPerMinute);
+			var seconds = Math.floor(wordCount % o.wordsPerMinute / (o.wordsPerMinute / 60));
 
 			//Prettify estimate
 			var estimate = 	o.prefix;
+
+				//Format minutes
 				estimate += (minutes <= 9 ? "0" : "");
 				estimate += minutes; 
-				estimate += ":"; 
+
+				estimate += o.separator; 
+
+				//Format seconds
 				estimate += (seconds <= 9 ? "0" : "");
 				estimate += seconds;
 

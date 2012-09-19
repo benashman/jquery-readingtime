@@ -1,5 +1,5 @@
 /*
- *	jquery.readingTime.js
+ *	jquery.readingtime.js
  * 	Display an estimated reading time for your blog posts etc.
  * 	
  * 	@benashman

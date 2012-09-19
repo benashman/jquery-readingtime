@@ -4,4 +4,4 @@ A simple jQuery plugin to calculate and display the estimated reading time for y
 
 ##Example
 
-![Example usage](https://github.com/benashman/jquery.readingtime.js/blob/master/img/example.png)
+[![Example usage](https://github.com/benashman/jquery.readingtime.js/blob/master/img/example.png)]
